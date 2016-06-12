@@ -33,11 +33,13 @@
 			
 			self.rootNavigationController = [[UINavigationController alloc] initWithRootViewController:vc.childViewControllers.firstObject];
 #ifdef APP_EXTENSION
-			self.rootNavigationController.view.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height-64-20);
+			self.rootNavigationController.view.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height-64);
 #else
 			self.rootNavigationController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-44-_FBStatusBarDelta());
 #endif
 			self.rootNavigationController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+
+			[self.rootNavigationController setToolbarHidden:NO];
 
 			[self.view addSubview:self.rootNavigationController.view];
 		}
