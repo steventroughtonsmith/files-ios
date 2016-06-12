@@ -15,4 +15,9 @@
 	return NO; // Don't let QLPreviewController interfere with keyboard shortcuts
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	[self.navigationController setToolbarHidden:NO];
+}
 @end

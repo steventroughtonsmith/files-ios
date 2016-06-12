@@ -67,12 +67,11 @@
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 	{
 		[self.rootNavigationController pushViewController:vc.childViewControllers.firstObject animated:YES];
+		[self.rootNavigationController setToolbarHidden:NO];
 	}
 	else
 	{
 		[self layout];
-		
-		
 		
 		self.view.contentSize = CGSizeMake(self.viewControllers.lastObject.view.frame.origin.x+self.viewControllers.lastObject.view.frame.size.width, self.view.frame.size.height-44-_FBStatusBarDelta());
 		[self.view scrollRectToVisible:vc.view.frame animated:YES];

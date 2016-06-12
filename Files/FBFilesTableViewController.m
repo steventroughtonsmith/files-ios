@@ -365,7 +365,7 @@
 					[self.columnViewController popToViewController:self.parentViewController];
 					
 					FBCustomPreviewController *preview = [[FBCustomPreviewController alloc] initWithFile:newPath];
-					
+
 					FBColumnNavigationController *detailNavController = [[FBColumnNavigationController alloc] initWithRootViewController:preview];
 					
 					[self.columnViewController pushDetailViewController:detailNavController];
@@ -376,10 +376,10 @@
 					
 					FBQLPreviewController *preview = [[FBQLPreviewController alloc] init];
 					preview.dataSource = self;
-					
+
 					FBColumnNavigationController *detailNavController = [[FBColumnNavigationController alloc] initWithRootViewController:preview];
-					
 					[self.columnViewController pushDetailViewController:detailNavController];
+					
 				}
 			}
 		}
