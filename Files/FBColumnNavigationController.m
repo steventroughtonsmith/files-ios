@@ -22,7 +22,9 @@
 		
 		UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_performPop:)];
 		
-		[self.navigationBar addGestureRecognizer:tap];		
+		[self.navigationBar addGestureRecognizer:tap];
+		
+		[self setToolbarHidden:NO];
 	}
 	return self;
 }
