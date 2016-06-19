@@ -14,6 +14,8 @@
 
 @implementation FBFilesTableViewController
 
+
+
 - (id)initWithPath:(NSString *)path
 {
 	self = [super initWithStyle:UITableViewStylePlain];
